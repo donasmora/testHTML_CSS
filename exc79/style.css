@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgb(255,235,235);
+    font-family: 'Open Sans', sans-serif;
+}
+.album {
+    padding: 15px;
+}
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+.album-item {
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px;
+    height: 200px;
+    text-align: center;
+}
