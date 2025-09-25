@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container {
+    display: flex;
+    background-color: rgb(240,240,240);
+    width: 100%;
+    flex-flow: row;
+}
+.element {
+    width: 50%;
+    background-color: rgb(100,150,100);
+    border: 2px solid black;
+    border-right: 0;
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.element:last-child {
+    background-color: rgb(200,100,100);
+    border-right: 2px solid black;
+}
