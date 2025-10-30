@@ -8,8 +8,10 @@ body {
 }
 nav {
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     background-color: rgb(125,125,200);
+    z-index: 100;
+    transition: all .18s ease;
 }
 nav.left {
     position: fixed;
@@ -35,10 +37,13 @@ nav.top {
     flex-direction: row;
 }
 .sub-menu {
-    overflow: hidden;
-    float: left;
+    position: relative;
+    display: inline-block;
 }
 .sub-menu-title {
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
     font-size: 1rem;
     border: none;
     outline: none;
@@ -52,14 +57,17 @@ nav a {
     margin: 0;
 }
 nav button:hover {
-    background-color: rgb(125,0,125);;
+    background-color: rgb(125,0,125);
+    outline: none;
 }
 .sub-menu-content {
     display: none;
     position: absolute;
+    top: 100%;
     left: 0;
     background-color: rgb(174, 145, 233);
     width: 100%;
+    z-index: 101;
     
 }
 .sub-menu-content a {
@@ -76,14 +84,55 @@ nav button:hover {
     display: block;
 }
 .container {
-    display: block;
-    position: absolute;
+    position: fixed;
     left: 25%;
-    top: 100px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 120;
+    display: flex;
+    gap: 8px;
 }
-p {
-    font-size: 1.1rem;
-    width: 50%;
-    border: 3px dashed rgb(174, 145, 233);
-    padding: 10px;
+.container label {
+    background: #fff;
+    border: 1px solid #99a;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+}
+/* Hide the radio buttons */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+/* When left is selected */
+#left:checked ~ nav#mainMenu { 
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+}
+/* When right is selected */
+#right:checked ~ nav#mainMenu { 
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+ }
+/* When top is selected */
+#top:checked ~ nav#mainMenu { 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    flex-direction: row; 
 }

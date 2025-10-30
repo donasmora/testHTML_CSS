@@ -7,11 +7,14 @@ body{
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-flow: row;
-    align-items: center;
 }
 div {
     width: 33%;
     text-align: center;
+    border: 2px solid black;
+    align-self: center;
+    margin: 2px;
+    padding: 2px;
 }
 p {
     font-size: 1.3rem;

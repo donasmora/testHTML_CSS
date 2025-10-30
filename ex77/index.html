@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation menu</title>
     <link rel="stylesheet" href=".\style.css">
 </head>
 <body>
-    <nav class="top">
+    <!-- Radio buttons to select menu position out of the 
+     body to be positioned  before in DOM-->
+    <input type="radio" id="top" name="position" checked>
+    <input type="radio" id="left" name="position">
+    <input type="radio" id="right" name="position">
+    <div class="container">
+        <label for="top">Top</label>
+        <label for="left">Left</label>
+        <label for="right">Right</label>
+    </div>
+    <nav id="mainMenu">
         <div class="sub-menu">
             <button class="sub-menu-title">Option 1</button>
             <div class="sub-menu-content">
@@ -46,8 +56,5 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <p>The postion of the menu can be modified in the HTML file by hand. Without JavaScript, the position of the menu cannot be changed dynamically, only in the html file.</p>
-    </div>
 </body>
 </html>
