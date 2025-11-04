@@ -6,9 +6,9 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #9f9f9f;
     font-size: 2rem;
     position:absolute;
+    margin: 0;
     top:0;
     bottom:0;
     left:0;
@@ -32,7 +32,7 @@ header, footer, section {
 header {
     height: 10%;
 }
-.container {
+main {
     display: flex;
     flex-flow: row wrap;
     height: calc(90% - 200px);
@@ -47,4 +47,5 @@ header {
     border-left: 7px solid black;
     border-right: 7px solid black;
     text-align: center;
+    overflow: hidden;
 }

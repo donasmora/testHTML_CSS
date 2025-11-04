@@ -8,14 +8,25 @@ body{
     display: flex;
     flex-flow: row;
 }
-div {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+.box {
     width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     text-align: center;
     border: 2px solid black;
     align-self: center;
     margin: 2px;
     padding: 2px;
 }
-p {
+.box p {
     font-size: 1.3rem;
+    margin: 0;
 }

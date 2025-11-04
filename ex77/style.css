@@ -96,6 +96,10 @@ input[type="radio"] {
     width: 20%;
     flex-direction: column;
 }
+#left:checked ~ nav#mainMenu .sub-menu-content {
+    top: 0;
+    left: 100%;
+}
 /* When right is selected */
 #right:checked ~ nav#mainMenu { 
     position: fixed;
@@ -105,6 +109,11 @@ input[type="radio"] {
     width: 20%;
     flex-direction: column;
  }
+ #right:checked ~ nav#mainMenu .sub-menu-content {
+    top: 0;
+    right: 100%;
+    left: auto;
+}
 /* When top is selected */
 #top:checked ~ nav#mainMenu { 
     position: fixed;
@@ -112,4 +121,8 @@ input[type="radio"] {
     top: 0;
     width: 100%;
     flex-direction: row; 
+}
+#top:checked ~ nav#mainMenu .sub-menu-content {
+    top: 100%;
+    left: 0;
 }
